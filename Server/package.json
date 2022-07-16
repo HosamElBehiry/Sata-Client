@@ -1,0 +1,43 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "cd ../client && npm start",
+    "dev": "concurrently \"nodemon server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG__PRODUCTION=false npm install cd ../client && npm run build ../client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "address": "^1.1.2",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "fcm-node": "^1.6.1",
+    "i18next": "^21.6.7",
+    "i18next-fs-backend": "^1.1.4",
+    "i18next-http-middleware": "^3.1.5",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.1.6",
+    "mongoose-moment": "^0.1.3",
+    "multer": "^1.4.3",
+    "node-fetch": "^3.2.0",
+    "node-schedule": "^2.1.0",
+    "nodemailer": "^6.7.2",
+    "request-promise": "^4.2.6"
+  },
+  "devDependencies": {
+    "concurrently": "^6.4.0",
+    "nodemon": "^2.0.15"
+  }
+}
